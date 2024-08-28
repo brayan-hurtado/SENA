@@ -1,0 +1,358 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif ;
+}
+
+.header{
+    background-color: rgb(141, 141, 141);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 5px 10px;
+}
+
+
+.header .logo img {
+    height: 60px;
+    width: auto;
+    transition: all 0.33;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .usuario{
+    display: flex;
+    text-decoration: underline;
+}
+
+.usuario-h3{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .iconos{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 80px;
+}
+
+.salto{
+    box-sizing: unset;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    height: 30px;
+    padding: 10px 10px;
+}
+
+.navbar {
+    background-color: rgb(255, 31, 31);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 65px;
+    padding: 5px 10px;
+    list-style: none;
+    
+}
+
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-right: 2px solid white;
+    padding-right: 30px;
+}
+
+.navbar-iconos{
+    position: absolute;
+    right: 15px;
+    margin-top: 15px; 
+    font-size: 50px;
+    color: white;
+}
+
+.input{
+    margin: 40px;
+    margin-left: 133px;
+    margin-right: 600px;
+}
+
+.refrescar {
+    position: absolute;
+    top: 220px;
+    right: 100px;
+    margin-bottom: 15px; 
+    font-size: 25px;
+}
+
+.icono-enlace{
+    position: absolute;
+    top: 220px;
+    right: 100px;
+    margin-bottom: 15px; 
+    font-size: 25px;
+}
+
+.card {
+    background-color: #fff;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px;
+    border-top: 10px solid #e74c3c; /* red top border */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details, .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info div, .details div {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.status span {
+    color: #e74c3c;
+}
+
+.links a {
+    text-decoration: none;
+    color: #e74c3c;
+    margin-left: 20px;
+}
+
+.salto{
+    box-sizing: unset;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    height: 30px;
+    padding: 10px 10px;
+}
+
+.body-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1080px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(175, 175, 175, 0.781);
+    padding-bottom: 10px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.content p{
+    font-size: 24px;
+    width: 100%;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+
+
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.input-box label{
+    width: 100%;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.area-texto{
+    margin-right: 5px;
+    width: 100%;
+    height: 100px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 1.5px;
+    resize: vertical;
+}
+
+.input-box input{
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #0000;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.linea-1{
+    width: 573px; /* Ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: rgb(56, 56, 56); /* Color de la línea */
+    display: inline-block; /* Para que se comporte como un elemento en línea */
+    margin-left: 20px; /* Espacio entre la palabra y la línea */
+    vertical-align: middle; /* Alineación vertical con el texto */
+}
+
+.linea-2{
+    width: 573px; /* Ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: rgb(56, 56, 56); /* Color de la línea */
+    display: inline-block; /* Para que se comporte como un elemento en línea */
+    margin-left: 105px; /* Espacio entre la palabra y la línea */
+    vertical-align: middle; /* Alineación vertical con el texto */
+}
+
+.button-container {
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-1 {
+    margin-right: 25px;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: seagreen;
+    box-shadow: 0 3px 1px -2px #ccc, 0 2px 2px 0 #ccc, 0 1px 5px 0 #ccc;
+}
+
+.btn-2 {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: crimson;
+    box-shadow: 0 3px 1px -2px #ccc, 0 2px 2px 0 #ccc, 0 1px 5px 0 #ccc;
+}
+
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9rem;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+}
+
+.content-table thead tr {
+    background-color: #222222;
+    color: #dddddd;
+    text-align: middle;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #acaaaa;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #cccaca;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #800e0e;
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}

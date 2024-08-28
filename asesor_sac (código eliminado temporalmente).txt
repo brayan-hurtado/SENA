@@ -1,0 +1,7 @@
+new_deadline = datetime.strptime(deadline, '%d/%m/%Y').strftime('%Y/%m/%d')
+        new_dateAsign = datetime.strptime(dateAsign, '%d/%m/%Y').strftime('%Y/%m/%d')
+
+def insertar_solicitud(self, servicio, logica, clientName, clientPlace, clientTel, rut, descripcion, deadline, dateAsign):
+        solicitud = self.solicitudes
+        solicitud.crear_solicitud(servicio, logica, clientName, clientPlace, clientTel, rut, descripcion, deadline, dateAsign)
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{url_for('static', filename='assets/Login/login.css')}}">
+<title>Login</title>
+<link rel="icon" href="{{url_for('static', filename='assets/imgs/Logo-top.png')}}" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{url_for('static', filename='assets/imgs/Logo.png')}}" alt="">
+        </div>
+        <!--
+        <nav> 
+            <div class="nav-links">
+                <li><a href="#"><ion-icon  class="iconos" name="person-circle-outline"></ion-icon><p>Iniciar Sesion</p></a></li>
+                <li><a href="#"><ion-icon  class="iconos" name="settings-outline"></ion-icon><p>Configuracion </p></a></li>
+                <li><a href="#"><ion-icon  class="iconos" name="alert-outline"></ion-icon><p>Reportar Problema</p></a></li>
+            </div>
+        </nav> -->
+    </header>
+    <section>
+        <div class="form_box">
+            <div class="form_value">
+                <form action="{{ url_for('login') }}" method="post">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="custom-alert-container">
+                                {% for message in messages %}
+                                    <div class="custom-alert">
+                                        <strong>{{ message }}</strong>
+                                        <button type="button" class="close-btn" aria-label="Close">&times;</button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var closeButtons = document.querySelectorAll('.close-btn');
+            
+                            closeButtons.forEach(function (button) {
+                                button.addEventListener('click', function () {
+                                    var alert = button.closest('.custom-alert');
+                                    if (alert) {
+                                        alert.style.opacity = 0;
+                                        setTimeout(function () {
+                                            alert.style.display = 'none';
+                                        }, 300); // coincide con la duración de la transición
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    
+                    <h2>Iniciar Sesión</h2>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                     <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="email">Correo electrónico:</label>
+                     </div>
+                     <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" required>
+                        <label for="password">Contraseña:</label>
+                     </div>
+                     <div class="forget">
+                        <p><a href="{{ url_for('formulario_registro_usuario') }}">Registrarse</a></p>
+                     </div>
+                     <div class="forget">
+                        <p><a href="#">Olvidé mi contraseña</a></p>
+                     </div>
+                     <button type="submit">Entrar</button>
+                     <div class="register">
+                        <p><a href="#">Terminos de uso |</a> <a href="#">Politicas de privacidad</a> </p>
+                     </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
