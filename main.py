@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, url_for, flash
+rom flask import Flask, render_template, redirect, request, url_for, flash
 from werkzeug.security import generate_password_hash
 from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
